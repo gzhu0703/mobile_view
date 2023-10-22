@@ -1,0 +1,242 @@
+.skip {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+}
+
+.skip:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+body {
+    color: black;
+    margin: 2.5%;
+    background: radial-gradient(circle, #F2C3D8 0%, #e5f1ff 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Cambria, Georgia, serif;
+}
+
+header {
+    padding: 10px;
+    font-size: 4em;
+    text-align: center;
+}
+
+header h1 {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-weight: bold;
+    color: transparent;
+    background-image: linear-gradient(to right, #ea28bd, #553c9a, #3ea0ad, #0072A0, #ea28bd);
+    -webkit-background-clip: text;
+    background-clip: text;    
+    background-size: 200%;
+    background-position: 100%;
+    animation: animated-gradient 5s linear infinite;
+}
+
+@keyframes animated-gradient{
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -100%; 
+    }
+}
+
+nav {
+    color: black;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
+.active {
+    background-color: #F2C3D8;
+    color: black;
+    border-radius: 10px;
+    border: 2px double black;
+    border-bottom: 4px solid black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #C73F90;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 2.4em;
+    color: #0072A0;
+    text-align: center;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #317D87;
+    padding: 5px 10px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+p {
+    padding: 10px;
+    line-height: 1.4em;
+    font-size: 1.2em;
+}
+
+img {
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 15px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.gallery img {
+    display: flex;
+    margin: 0;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.likes, .ingredients {
+    margin: 0 35px;
+    list-style-type: square;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+.steps {
+    list-style-type: decimals;
+    margin: 0 35px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+.likes li, .ingredients li, .steps li {
+    margin: 10px 0;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    text-align: left;
+    padding: 0 10px;
+}
+
+figure figcaption { 
+    padding-left: 10px;
+    padding-top: 15px;
+    font-size: 90%;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.food-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food-img img {
+    margin: 5px 0;
+}
+
+.cookie-img {
+    width: 85%;
+    height: auto;
+}
+
+span {
+    display: block;
+    margin: 5px;
+    text-align: center;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+@media (prefers-reduced-motion) {
+    header h1 {
+        color: black;
+    }
+    .gif {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablet view: */
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop view: */
+    .main-pet-img {
+        float: left;
+        margin: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .likes {
+        margin-left: 35%;
+    }
+
+    .food-img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+}
